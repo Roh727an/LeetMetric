@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetMetric</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Container Starts Here -->
+    <div class="container">
+        <!-- 1.h1 -->
+        <h1>LeetMetric</h1>
+        <!-- 2.User Data-->
+         <div class="user-container">
+            <!-- 2.1.P -->
+            <p>Enter Your Username Below: </p>
+            <!-- 2.2.User input & Search Button -->
+            <div class="user-input-container">
+                <!-- 2.2.1. Input for User -->
+                <input type="text" placeholder="Enter your username here" id="user-input">
+                <!-- 2.2.2. Search -->
+                <button id="search-btn">Search</button>
+            </div>
+         </div>
+        <!-- 3.stat -->
+         <div class="stats-container">
+            <!-- 3.1.Progress Section -->
+            <div class="progress">
+                <!-- Progress Item -->
+                 
+                <!-- Easy Problems -->
+                <div class="progress-item">
+                     <!--For Circle  -->
+                    <div class="easy-progress circle">
+                        <!-- For showing Data(Easy) -->
+                         <span id="easy-label"></span>
+                         <p>Easy</p>
+                     </div>
+                </div>
+                
+                <!-- Medium Problems -->
+                <div class="progress-item">
+                     <!--For Circle  -->
+                    <div class="medium-progress circle">
+                        <!-- For showing Data(medium) -->
+                         <span id="medium-label"></span>
+                         <p>Medium</p>
+                     </div>
+                </div>
+
+                <!-- Hard Problems -->
+                <div class="progress-item">
+                     <!--For Circle  -->
+                    <div class="hard-progress circle">
+                        <!-- For showing Data(Easy) -->
+                         <span id="hard-label"></span>
+                         <p>Hard</p>
+                     </div>
+                </div>
+
+
+
+            </div>
+
+            <!-- 3.2.Card Section -->
+             <div class="stats-cards">
+                <!-- Directly Populate from JavaScript(Script File) -->
+             </div>
+
+         </div>
+    <!-- Container Ends Here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
