@@ -82,6 +82,13 @@ document.addEventListener("DOMContentLoaded",
             const progressDegree = (solved / total) * 100;
             // Update progress-degree in style of Circle
             circle.style.setProperty("--progress-degree", `${progressDegree}%`);
+            // Easy ,  Medium, Hard Colors
+            if(label===easyLabel)
+                circle.style.setProperty("--progress-color", 'green');
+            else if(label===mediumLabel)
+                circle.style.setProperty("--progress-color", 'orange');
+            else 
+                circle.style.setProperty("--progress-color", 'red');
             // Update Label to show how many questions are solved
             label.textContent = `${solved}/${total}`
         }
@@ -108,7 +115,7 @@ document.addEventListener("DOMContentLoaded",
             // Card Data Generate(Dynamically)
             const cardsData = [
                 { label: "Total Questions Solved: ", value: JSONdata.totalSolved },
-                { label: "Acceptence Rate: ", value: JSONdata.acceptanceRate },
+                { label: "Acceptence Rate(%): ", value: JSONdata.acceptanceRate },
                 { label: "Ranking: ", value: JSONdata.ranking },
                 { label: "Contribution Points: ", value: JSONdata.contributionPoints },
             ];
@@ -118,16 +125,14 @@ document.addEventListener("DOMContentLoaded",
                 data => {
                     return `
                     <div class='card'>
-                    <h4>${data.label}</h4>
-                    <p>${data.value}</p>
+                    <h4>${data.label} </h4>
+                    <p> ${data.value}</p>
                     </div>
                     `
                 }
             ).join("")
 
         }
-
-
 
         // ************** Starts Here **************
         // 1.User will put username & search -> eventListener on search button
